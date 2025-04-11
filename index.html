@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Aroma Alchemy&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Segoe UI', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f3f1ec;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.screen {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.screen.active {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 3em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.enter-btn, .submit-btn, .regenerate-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.enter-btn { background-color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.submit-btn { background-color: #4caf50; color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.regenerate-btn { background-color: #ffc107; color: #000; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.desk-paper {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 30px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.checkbox-group label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>pre {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f4f4f4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: pre-wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>word-break: break-word;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="screen active" id="startScreen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="title"&gt;Aroma Alchemy&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="enter-btn" onclick="enterApp()"&gt;Enter&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="screen" id="mainScreen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="desk-paper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Select Your Mood&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="checkbox-group" id="moodOptions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="anxious"&gt; Anxious&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="tired"&gt; Tired&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="foggy"&gt; Foggy&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="unmotivated"&gt; Unmotivated&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="sad"&gt; Sad&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="stressed"&gt; Stressed&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;What are you doing?&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="checkbox-group" id="activityOptions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="studying"&gt; Studying&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="crafting"&gt; Crafting&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="cleaning"&gt; Cleaning&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="watching"&gt; Watching a Movie&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="resting"&gt; Resting&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;&lt;input type="checkbox" value="sleeping"&gt; Sleeping&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="submit-btn" onclick="generateBlend()"&gt;Create My Blend&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="screen" id="resultScreen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="desk-paper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Your Recipe&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;pre id="blendResult"&gt;&lt;/pre&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="regenerate-btn" onclick="regenerateBlend()"&gt;Regenerate&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="submit-btn" onclick="goBack()"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function enterApp() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('startScreen').classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('mainScreen').classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const oils = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>rosemary: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['focus', 'clarity', 'energy', 'studying'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Great for focus, breathing, and energizing the mind.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cedarwood: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['grounding', 'calm', 'sleep', 'anxiety'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Calms the mind, promotes grounding and deep rest.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>elevation: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['joy', 'energy', 'uplift', 'mood'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Uplifts mood and boosts energy, great for emotional resets.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bergamot: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['anxiety', 'joy', 'emotional balance', 'sad'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Uplifts mood, reduces anxiety, promotes emotional harmony.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>eucalyptus: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['breathe', 'clarity', 'cleaning'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Clears the airways, boosts clarity, good for respiratory support.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>serenity: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['calm', 'sleep', 'stress', 'resting'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Promotes deep relaxation, reduces stress, ideal for sleep.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>peppermint: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['focus', 'energy', 'refreshing', 'tired'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Stimulates alertness, clears mental fog, refreshes senses.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lavender: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['calm', 'stress', 'anxiety', 'resting'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Soothes the mind, helps with stress and promotes calm.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>oregano: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['immunity', 'cleansing', 'strength'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Powerful cleansing properties, supports immune system.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tea_tree: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['purifying', 'clarity', 'cleaning'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Cleanses air and surfaces, promotes mental clarity.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dandelion: {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>keywords: ['detox', 'cleansing', 'stagnation'],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>notes: 'Symbolic of renewal, supports emotional clearing and detox.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function generateBlend() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const selectedMoods = Array.from(document.querySelectorAll('#moodOptions input:checked')).map(input =&gt; input.value);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const selectedActivities = Array.from(document.querySelectorAll('#activityOptions input:checked')).map(input =&gt; input.value);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const relevantKeywords = [...selectedMoods, ...selectedActivities];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isStudying = selectedActivities.includes('studying');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const relaxingKeywords = ['calm', 'resting', 'sleep', 'sleeping'];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const energizingKeywords = ['focus', 'energy', 'clarity'];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let filteredOils = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const [name, data] of Object.entries(oils)) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const matches = data.keywords.filter(k =&gt; relevantKeywords.includes(k));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (matches.length &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const isRelaxing = data.keywords.some(k =&gt; relaxingKeywords.includes(k));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (isStudying &amp;&amp; isRelaxing) continue;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>filteredOils.push({</p>
+<p class="p1"><span class="Apple-converted-space">          </span>name,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>drops: matches.length &gt;= 2 ? 2 : 1,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>notes: data.notes,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>matchScore: matches.length</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>filteredOils.sort((a, b) =&gt; b.matchScore - a.matchScore);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const recommended = filteredOils.slice(0, 3);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let blendText = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>recommended.forEach(oil =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>blendText += `${oil.name.charAt(0).toUpperCase() + oil.name.slice(1)}: ${oil.drops} drops\n`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>blendText += "\nMore info:\n";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>recommended.forEach(oil =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>blendText += `${oil.name.charAt(0).toUpperCase() + oil.name.slice(1)}: ${oil.notes}\n`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('mainScreen').classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('resultScreen').classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('blendResult').textContent = blendText;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function regenerateBlend() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>generateBlend();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function goBack() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('resultScreen').classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('mainScreen').classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
